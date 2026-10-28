@@ -5,977 +5,524 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>María Beatriz Valencia | Senior Social Media Manager & Growth Strategist</title>
   
-  <!-- Fonts: Plus Jakarta Sans & Space Grotesk -->
+  <!-- Favicon Oficial con tu Logo -->
+  <link rel="icon" type="image/png" href="logo.png">
+  <link rel="apple-touch-icon" href="logo.png">
+
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
-  
-  <!-- FontAwesome Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
-      darkMode: 'class',
       theme: {
         extend: {
           fontFamily: {
             sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-            display: ['"Space Grotesk"', 'sans-serif'],
+            mono: ['"Space Grotesk"', 'monospace'],
           },
           colors: {
             brand: {
-              dark: '#08090E',
-              card: '#10121C',
-              border: 'rgba(99, 102, 241, 0.15)',
+              50: '#eef2ff',
+              400: '#818cf8',
+              500: '#6366f1',
+              600: '#4f46e5',
+            },
+            neon: {
               cyan: '#06b6d4',
-              indigo: '#6366f1',
               violet: '#8b5cf6',
+              amber: '#f59e0b',
+            },
+            dark: {
+              bg: '#08090E',
+              card: '#0f1017',
+              surface: '#151722',
+              border: '#232738'
             }
           }
         }
       }
     }
   </script>
-
   <style>
-    body {
-      background-color: #08090E;
-      color: #E2E8F0;
-      font-feature-settings: "cv02", "cv03", "cv04", "cv11";
-    }
-
-    .glass-panel {
-      background: rgba(16, 18, 28, 0.75);
+    .glass-card {
+      background: rgba(15, 16, 23, 0.75);
       backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
-      border: 1px solid rgba(99, 102, 241, 0.18);
-      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      border: 1px solid rgba(255, 255, 255, 0.08);
     }
-
-    .glass-panel:hover {
-      border-color: rgba(6, 182, 212, 0.45);
-      box-shadow: 0 16px 36px -12px rgba(6, 182, 212, 0.18);
-      transform: translateY(-3px);
+    .glow-cyan {
+      box-shadow: 0 0 40px -10px rgba(6, 182, 212, 0.35);
     }
-
-    .text-glow-gradient {
-      background: linear-gradient(135deg, #38bdf8 0%, #818cf8 50%, #c084fc 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+    .glow-violet {
+      box-shadow: 0 0 40px -10px rgba(139, 92, 246, 0.35);
     }
-
-    .bg-cyber-radial {
-      background: radial-gradient(circle at 50% 0%, rgba(99, 102, 241, 0.18) 0%, rgba(6, 182, 212, 0.08) 35%, rgba(8, 9, 14, 0) 70%);
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 6px;
     }
-
-    /* Modal Animation */
-    .modal-enter {
-      animation: modalFadeIn 0.25s ease-out forwards;
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: rgba(15, 16, 23, 0.6);
+      border-radius: 8px;
     }
-    @keyframes modalFadeIn {
-      from { opacity: 0; transform: scale(0.97) translateY(8px); }
-      to { opacity: 1; transform: scale(1) translateY(0); }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: rgba(6, 182, 212, 0.4);
+      border-radius: 8px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+      background: rgba(6, 182, 212, 0.8);
     }
   </style>
 </head>
-<body class="selection:bg-cyan-500 selection:text-black min-h-screen flex flex-col justify-between">
+<body class="bg-dark-bg text-slate-100 min-h-screen selection:bg-neon-cyan selection:text-black">
 
-  <!-- ================= HEADER / NAVBAR ================= -->
-  <header class="sticky top-0 z-40 w-full glass-panel border-b border-brand-border bg-[#08090E]/85">
+  <!-- Navbar -->
+  <header class="sticky top-0 z-40 w-full glass-card border-b border-dark-border/80">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-      
-      <!-- Logo Oficial en Contenedor Blanco Limpio y Nítido -->
-      <a href="#hero" class="flex items-center gap-3.5 group">
-        <div class="h-12 w-auto px-2 py-1 rounded-xl bg-white shadow-md shadow-white/10 flex items-center justify-center border border-white/60 group-hover:scale-105 transition-all">
-          <img src="logo.png" alt="Logo MaBeatriz Valencia" class="h-10 w-auto object-contain">
-        </div>
-        <div class="hidden sm:block">
-          <span class="text-base font-bold tracking-tight text-white block group-hover:text-cyan-400 transition-colors font-display">Ma. Beatriz Valencia</span>
-          <span class="text-[11px] text-cyan-400 tracking-wider uppercase font-semibold block">Digital Marketer & E-commerce</span>
-        </div>
-      </a>
-
-      <!-- Quick Nav Links -->
-      <nav class="hidden md:flex items-center gap-8 text-xs font-semibold uppercase tracking-wider text-neutral-300">
-        <a href="#casos" class="hover:text-cyan-400 transition-colors">Casos de Éxito</a>
-        <a href="#metricas" class="hover:text-cyan-400 transition-colors">Métricas & ROI</a>
-        <a href="#skills" class="hover:text-cyan-400 transition-colors">Stack & Expertise</a>
-        <a href="#trayectoria" class="hover:text-cyan-400 transition-colors">Trayectoria</a>
-      </nav>
-
-      <!-- Action Buttons -->
       <div class="flex items-center gap-3">
-        <!-- Toggle Pitch Deck -->
-        <button id="deckToggleBtn" onclick="togglePitchDeck()" class="px-3.5 py-2 text-xs font-semibold rounded-lg bg-neutral-900 border border-brand-border text-neutral-200 hover:border-cyan-400 hover:text-white flex items-center gap-2 transition-all">
-          <i class="fa-solid fa-chalkboard-user text-cyan-400"></i>
-          <span class="hidden sm:inline">Modo Deck</span>
-        </button>
-
-        <!-- Contacto WhatsApp -->
-        <a href="https://wa.me/593969247829?text=Hola%20María%20Beatriz,%20vi%20tu%20portafolio%20visual%20y%20deseo%20agendar%20una%20reunión%20estratégica" target="_blank" class="px-4 py-2 text-xs sm:text-sm font-bold rounded-lg bg-gradient-to-r from-cyan-500 to-indigo-600 text-white hover:brightness-110 transition-all font-display tracking-wide shadow-lg shadow-indigo-500/25 flex items-center gap-2">
-          <i class="fa-brands fa-whatsapp text-sm"></i>
-          <span>Contactar</span>
+        <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-white p-1 flex items-center justify-center shadow-md">
+          <img src="logo.png" alt="Logo María Beatriz Valencia" class="w-full h-full object-contain">
+        </div>
+        <div>
+          <span class="font-bold text-sm sm:text-lg tracking-tight block text-white leading-tight">Ma. Beatriz Valencia</span>
+          <span class="text-[10px] sm:text-[11px] font-mono text-neon-cyan uppercase tracking-wider block font-semibold">Digital Marketer & E-commerce</span>
+        </div>
+      </div>
+      <nav class="hidden md:flex items-center gap-8 text-xs uppercase tracking-wider font-semibold text-slate-300">
+        <a href="#casos" class="hover:text-neon-cyan transition-colors">Casos de Éxito</a>
+        <a href="#metricas" class="hover:text-neon-cyan transition-colors">Métricas & ROI</a>
+        <a href="#stack" class="hover:text-neon-cyan transition-colors">Stack & Expertise</a>
+        <a href="#contacto" class="hover:text-neon-cyan transition-colors">Contacto</a>
+      </nav>
+      <div class="flex items-center gap-3">
+        <a href="https://wa.me/593969247829" target="_blank" class="px-4 py-2 rounded-xl bg-gradient-to-r from-neon-cyan to-brand-500 text-black font-bold text-xs uppercase tracking-wider shadow-lg hover:opacity-90 transition-all flex items-center gap-2">
+          <span>WhatsApp</span>
         </a>
       </div>
     </div>
   </header>
 
-  <!-- ================= MAIN WEB VIEW ================= -->
-  <main id="webPortfolioView" class="relative overflow-hidden">
-    <!-- Cyber Radial Glow Accent -->
-    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-6xl h-[480px] bg-cyber-radial pointer-events-none -z-10"></div>
-
-    <!-- ================= HERO SECTION ================= -->
-    <section id="hero" class="pt-14 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-        
-        <!-- Left: Copy & Value Proposition -->
-        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
-          
-          <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 text-xs font-semibold tracking-wide">
-            <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+  <!-- Hero Section -->
+  <section class="relative pt-10 sm:pt-16 pb-16 sm:pb-24 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-neon-cyan/30 bg-neon-cyan/10 text-neon-cyan text-xs font-mono">
+            <span class="w-2 h-2 rounded-full bg-neon-cyan animate-pulse"></span>
             Senior Social Media Manager & Growth Strategist
           </div>
-
-          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight font-display leading-[1.12]">
-            Escalando marcas con visión de <span class="text-glow-gradient">Ingeniería & Conversión.</span>
+          <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.15]">
+            Escalando marcas con visión de <span class="text-transparent bg-clip-text bg-gradient-to-r from-neon-cyan via-indigo-400 to-neon-violet">Ingeniería & Conversión</span>.
           </h1>
-
-          <p class="text-base sm:text-lg text-neutral-300 font-normal leading-relaxed max-w-2xl mx-auto lg:mx-0">
-            Soy <strong class="text-white font-semibold">María Beatriz Valencia Robles</strong>. Lidero estrategias digitales integrales combinando pauta publicitaria de alto rendimiento (Meta Ads & Google Ads), creación de contenido con enfoque de engagement y optimización e-commerce técnica con base en mi titulación en <strong class="text-cyan-400 font-medium">EAE Business School Madrid</strong> y la <strong class="text-indigo-400 font-medium">UCSG</strong>.
+          <p class="text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl">
+            Soy <strong class="text-white">María Beatriz Valencia Robles</strong>. Lidero estrategias digitales integrales combinando pauta publicitaria de alto rendimiento (Meta Ads & Google Ads), creación de contenido con enfoque de engagement y optimización e-commerce técnica con base en mi titulación en <span class="text-white font-semibold">EAE Business School Madrid</span> y la <span class="text-white font-semibold">UCSG</span>.
           </p>
-
-          <!-- Badges de credenciales -->
-          <div class="flex flex-wrap items-center justify-center lg:justify-start gap-3.5 pt-2 text-xs font-medium text-neutral-400">
-            <span class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-neutral-900 border border-brand-border">
-              <i class="fa-solid fa-graduation-cap text-cyan-400"></i> Máster EAE Madrid
-            </span>
-            <span class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-neutral-900 border border-brand-border">
-              <i class="fa-solid fa-certificate text-indigo-400"></i> Google Ads Certified
-            </span>
-            <span class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-neutral-900 border border-brand-border">
-              <i class="fa-solid fa-earth-americas text-cyan-400"></i> Cuentas USA & Ecuador
-            </span>
+          <div class="flex flex-wrap gap-2.5 sm:gap-3 pt-2">
+            <span class="px-3 py-1.5 rounded-lg bg-dark-surface border border-dark-border text-xs text-slate-300">🎓 Máster EAE Madrid</span>
+            <span class="px-3 py-1.5 rounded-lg bg-dark-surface border border-dark-border text-xs text-slate-300">🏆 Google Ads Certified</span>
+            <span class="px-3 py-1.5 rounded-lg bg-dark-surface border border-dark-border text-xs text-slate-300">📈 Cuentas USA & Ecuador</span>
           </div>
-
-          <!-- CTAs y contacto -->
-          <div class="pt-4 flex flex-wrap items-center justify-center lg:justify-start gap-4">
-            <a href="https://linkedin.com/in/maría-beatriz-valencia-robles-91985497" target="_blank" class="px-5 py-3 rounded-xl bg-neutral-900 hover:bg-neutral-800 text-white border border-brand-border text-xs sm:text-sm font-semibold flex items-center gap-2.5 transition-all">
-              <i class="fa-brands fa-linkedin text-cyan-400 text-base"></i>
-              <span>Perfil LinkedIn</span>
+          <div class="pt-4 flex flex-wrap gap-3 sm:gap-4">
+            <a href="https://linkedin.com/in/maría-beatriz-valencia-robles-91985497" target="_blank" class="px-5 sm:px-6 py-3.5 rounded-xl bg-dark-surface border border-brand-500/40 text-white font-semibold text-xs sm:text-sm hover:border-brand-500 transition-all flex items-center gap-2">
+              <span>💼 Perfil LinkedIn</span>
             </a>
-            <a href="mailto:mabeatriz.vr@hotmail.com" class="px-5 py-3 rounded-xl bg-neutral-900 hover:bg-neutral-800 text-white border border-brand-border text-xs sm:text-sm font-semibold flex items-center gap-2.5 transition-all">
-              <i class="fa-solid fa-envelope text-cyan-400 text-base"></i>
-              <span>mabeatriz.vr@hotmail.com</span>
+            <a href="mailto:mabeatriz.vr@hotmail.com" class="px-5 sm:px-6 py-3.5 rounded-xl bg-dark-surface border border-dark-border text-slate-300 font-semibold text-xs sm:text-sm hover:border-slate-500 transition-all flex items-center gap-2">
+              <span>✉️ mabeatriz.vr@hotmail.com</span>
             </a>
-            <a href="tel:+593969247829" class="px-5 py-3 rounded-xl bg-neutral-900 hover:bg-neutral-800 text-white border border-brand-border text-xs sm:text-sm font-semibold flex items-center gap-2.5 transition-all">
-              <i class="fa-solid fa-phone text-cyan-400 text-base"></i>
-              <span>+593 969 247 829</span>
+            <a href="tel:+593969247829" class="px-5 sm:px-6 py-3.5 rounded-xl bg-dark-surface border border-dark-border text-slate-300 font-semibold text-xs sm:text-sm hover:border-slate-500 transition-all flex items-center gap-2">
+              <span>📞 +593 969 247 829</span>
             </a>
           </div>
-
         </div>
-        <!-- Right: Hero Card Original con TU FOTO REAL con encuadre tipo LinkedIn y mayor presencia -->
+
+        <!-- Foto de Perfil Idéntica a LinkedIn -->
         <div class="lg:col-span-5 flex justify-center">
-          <div class="relative w-80 sm:w-96">
-            
-            <!-- Glow azul/violeta futurista detrás de la tarjeta -->
-            <div class="absolute -inset-2 bg-gradient-to-tr from-cyan-500/20 via-indigo-600/30 to-purple-600/20 rounded-3xl blur-2xl opacity-70"></div>
-
-            <div class="relative rounded-2xl glass-panel p-6 border border-indigo-500/30 bg-[#0E101A]/90 space-y-6 shadow-2xl">
+          <div class="relative w-full max-w-xs sm:max-w-sm">
+            <div class="absolute -inset-1 rounded-3xl bg-gradient-to-tr from-neon-cyan via-indigo-600 to-neon-violet opacity-40 blur-xl"></div>
+            <div class="relative glass-card rounded-3xl p-6 border border-dark-border/80 flex flex-col items-center text-center">
+              <div class="w-44 h-44 sm:w-52 sm:h-52 rounded-full p-1 bg-gradient-to-tr from-neon-cyan via-indigo-500 to-neon-violet shadow-2xl relative mb-4">
+                <div class="w-full h-full rounded-full overflow-hidden bg-slate-900 border-2 border-dark-bg">
+                  <img src="fotocv_2.jpg" alt="María Beatriz Valencia" class="w-full h-full object-cover object-[50%_15%] scale-110">
+                </div>
+                <div class="absolute bottom-2 right-2 w-7 h-7 rounded-full bg-neon-cyan border-2 border-dark-bg flex items-center justify-center text-black font-bold text-xs shadow-md">
+                  ✓
+                </div>
+              </div>
+              <h2 class="text-xl font-bold text-white tracking-tight">María Beatriz Valencia</h2>
+              <p class="text-neon-cyan text-xs font-mono mt-1">Digital Marketer | E-commerce | Social Media Manager</p>
               
-              <!-- Tag disponibilidad superior -->
-              <div class="flex items-center justify-between text-xs font-mono border-b border-indigo-500/20 pb-4">
-                <span class="px-2.5 py-1 rounded bg-indigo-500/10 border border-indigo-500/30 text-indigo-300">
-                  Disponibilidad Inmediata
-                </span>
-                <span class="text-neutral-400">Guayaquil / Remoto</span>
-              </div>
-
-              <!-- FOTO CIRCULAR IDÉNTICA A LINKEDIN CON TRIPLE FALLBACK -->
-              <div class="flex flex-col items-center text-center space-y-4">
-                <div class="relative group">
-                  <!-- Contenedor circular con borde pulido e iluminación suave -->
-                  <div class="w-44 h-44 sm:w-48 sm:h-48 rounded-full overflow-hidden border-4 border-cyan-500/60 shadow-2xl shadow-cyan-500/25 bg-[#161926] relative p-1 bg-gradient-to-tr from-cyan-500 via-indigo-500 to-violet-500">
-                    <div class="w-full h-full rounded-full overflow-hidden bg-neutral-900">
-                      <img 
-                        id="userAvatarPhoto"
-                        src="fotocv_2.jpg" 
-                        alt="María Beatriz Valencia Robles" 
-                        onerror="
-                          const fallbacks = ['fotocv.jpg', 'input_file_4.png', 'input_file_0.png'];
-                          const currentSrc = this.getAttribute('src');
-                          const nextIndex = fallbacks.indexOf(currentSrc) + 1;
-                          if (nextIndex < fallbacks.length) {
-                            this.src = fallbacks[nextIndex];
-                          }
-                        "
-                        class="w-full h-full object-cover object-[50%_15%] scale-110 rounded-full transition-transform duration-300 group-hover:scale-115"
-                      />
-                    </div>
-                  </div>
-                  <!-- Badge de verificación oficial en la esquina inferior derecha -->
-                  <div class="absolute bottom-1.5 right-2 w-9 h-9 rounded-full bg-cyan-400 text-neutral-950 flex items-center justify-center font-bold text-sm shadow-lg shadow-cyan-500/40 border-2 border-[#0E101A] z-10" title="Perfil Profesional Verificado">
-                    <i class="fa-solid fa-check font-black"></i>
-                  </div>
+              <div class="mt-6 w-full pt-4 border-t border-dark-border/60 grid grid-cols-2 gap-3 text-left">
+                <div class="p-3 rounded-xl bg-dark-surface/50 border border-dark-border/40">
+                  <span class="text-[10px] text-slate-400 uppercase font-mono block">Enfoque Primario</span>
+                  <span class="text-xs font-bold text-white">ROI & Captación</span>
                 </div>
-
-                <div>
-                  <h3 class="text-xl sm:text-2xl font-bold font-display text-white tracking-tight">María Beatriz Valencia</h3>
-                  <p class="text-xs sm:text-sm text-cyan-400 font-semibold tracking-wide mt-1">
-                    Digital Marketer | E-commerce | Social Media Manager
-                  </p>
+                <div class="p-3 rounded-xl bg-dark-surface/50 border border-dark-border/40">
+                  <span class="text-[10px] text-slate-400 uppercase font-mono block">Doble Titulación</span>
+                  <span class="text-xs font-bold text-white">Ingeniería + Máster EAE</span>
                 </div>
-              </div>
-
-              <!-- Barra de Enfoque Primario con gradiente -->
-              <div class="p-3.5 rounded-xl bg-black/60 border border-white/5 space-y-2">
-                <div class="flex items-center justify-between text-xs">
-                  <span class="text-neutral-400">Enfoque Primario</span>
-                  <span class="text-cyan-400 font-bold font-mono">ROI & Captación</span>
-                </div>
-                <div class="w-full h-2 rounded-full bg-neutral-800 overflow-hidden">
-                  <div class="h-full w-full bg-gradient-to-r from-indigo-500 via-purple-500 to-cyan-400 rounded-full animate-pulse"></div>
-                </div>
-              </div>
-
-            </div>
-
-            <!-- Floating Badge Doble Titulación -->
-            <div class="absolute -bottom-5 -left-4 p-3 rounded-xl glass-panel border border-indigo-500/30 flex items-center gap-3 shadow-2xl bg-[#0b0d16]">
-              <div class="w-9 h-9 rounded-lg bg-indigo-500/20 text-indigo-400 flex items-center justify-center text-sm">
-                <i class="fa-solid fa-award"></i>
-              </div>
-              <div>
-                <p class="text-[10px] text-neutral-400 uppercase tracking-wider font-semibold">DOBLE TITULACIÓN</p>
-                <p class="text-xs font-bold text-white">Ingeniería + Máster EAE</p>
               </div>
             </div>
-
           </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ================= METRICS & ROI HIGHLIGHTS ================= -->
-    <section id="metricas" class="border-y border-brand-border bg-[#0B0D17] py-12 px-4 sm:px-6 lg:px-8">
-      <div class="max-w-7xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-6 text-center">
-        
-        <div class="p-6 rounded-2xl glass-panel">
-          <div class="text-3xl sm:text-4xl font-extrabold font-display text-white mb-1">
-            <span class="text-glow-gradient">7+ Años</span>
-          </div>
-          <p class="text-xs sm:text-sm text-neutral-400 font-medium">Experiencia en Social Media & E-commerce</p>
-        </div>
-
-        <div class="p-6 rounded-2xl glass-panel">
-          <div class="text-3xl sm:text-4xl font-extrabold font-display text-white mb-1">
-            <span class="text-cyan-400">USA & EC</span>
-          </div>
-          <p class="text-xs sm:text-sm text-neutral-400 font-medium">Gestión de Marcas Internacionales y Locales</p>
-        </div>
-
-        <div class="p-6 rounded-2xl glass-panel">
-          <div class="text-3xl sm:text-4xl font-extrabold font-display text-white mb-1">
-            <span class="text-indigo-400">180° Giro</span>
-          </div>
-          <p class="text-xs sm:text-sm text-neutral-400 font-medium">Transformación de Comunicación & Leads</p>
-        </div>
-
-        <div class="p-6 rounded-2xl glass-panel">
-          <div class="text-3xl sm:text-4xl font-extrabold font-display text-white mb-1">
-            <span class="text-glow-gradient">ROI (+)</span>
-          </div>
-          <p class="text-xs sm:text-sm text-neutral-400 font-medium">Retorno Positivo en Campañas de Pauta</p>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ================= CASOS DE ESTUDIO ================= -->
-    <section id="casos" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-      
-      <!-- Section Header -->
-      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
-        <div>
-          <span class="text-xs font-bold text-cyan-400 tracking-widest uppercase mb-2 block font-display">Portafolio Profesional</span>
-          <h2 class="text-3xl sm:text-4xl font-bold font-display text-white">Casos de Éxito & Ecosistemas Digitales</h2>
-          <p class="text-neutral-400 text-sm mt-2 max-w-xl">
-            Haz clic en cualquiera de los proyectos para ver el desglose técnico, tácticas de crecimiento y enlaces directos a sus sitios y perfiles de Instagram.
-          </p>
-        </div>
-
-        <!-- Filtros interactivos -->
-        <div class="flex flex-wrap gap-2 p-1.5 rounded-xl bg-neutral-900 border border-brand-border self-start md:self-auto">
-          <button onclick="filterProjects('all')" data-filter="all" class="filter-btn active px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-gradient-to-r from-cyan-500 to-indigo-600 text-white transition-all">
-            Todos
-          </button>
-          <button onclick="filterProjects('ecommerce')" data-filter="ecommerce" class="filter-btn px-3.5 py-1.5 rounded-lg text-xs font-semibold text-neutral-300 hover:text-white transition-all">
-            E-commerce & Ads
-          </button>
-          <button onclick="filterProjects('corporativo')" data-filter="corporativo" class="filter-btn px-3.5 py-1.5 rounded-lg text-xs font-semibold text-neutral-300 hover:text-white transition-all">
-            Corporativo & Seguros
-          </button>
-          <button onclick="filterProjects('educacion')" data-filter="educacion" class="filter-btn px-3.5 py-1.5 rounded-lg text-xs font-semibold text-neutral-300 hover:text-white transition-all">
-            Educación & Admisiones
-          </button>
-          <button onclick="filterProjects('tech')" data-filter="tech" class="filter-btn px-3.5 py-1.5 rounded-lg text-xs font-semibold text-neutral-300 hover:text-white transition-all">
-            Tech & B2B
-          </button>
         </div>
       </div>
+    </div>
+  </section>
 
-      <!-- Projects Grid -->
-      <div id="projectsContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        
-        <!-- CARD 1: LYCAN FITNESS (USA & ECUADOR) -->
-        <div class="project-card group glass-panel rounded-2xl overflow-hidden cursor-pointer" data-category="ecommerce" onclick="openProjectModal('lycan')">
-          <div class="h-48 w-full bg-gradient-to-br from-[#121422] to-[#0A0B12] relative overflow-hidden border-b border-brand-border flex flex-col justify-between p-5">
-            <div class="flex justify-between items-start">
-              <span class="px-2.5 py-1 rounded-md text-[10px] font-bold uppercase tracking-wider bg-cyan-500/20 text-cyan-300 border border-cyan-500/30">
-                E-commerce Internacional
-              </span>
-              <span class="text-xs text-neutral-400 font-mono">2023 - Actual</span>
+  <!-- Métricas Clave -->
+  <section id="metricas" class="py-12 bg-dark-surface/40 border-y border-dark-border/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        <div class="p-4">
+          <span class="text-3xl sm:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-neon-cyan to-white font-mono">180°</span>
+          <span class="text-xs uppercase font-mono text-slate-400 block mt-1">Giro de Comunicación</span>
+        </div>
+        <div class="p-4">
+          <span class="text-3xl sm:text-4xl font-extrabold text-neon-cyan font-mono">+ROI</span>
+          <span class="text-xs uppercase font-mono text-slate-400 block mt-1">Retorno Positivo en Pauta</span>
+        </div>
+        <div class="p-4">
+          <span class="text-3xl sm:text-4xl font-extrabold text-neon-violet font-mono">+7 Años</span>
+          <span class="text-xs uppercase font-mono text-slate-400 block mt-1">Social Media & E-commerce</span>
+        </div>
+        <div class="p-4">
+          <span class="text-3xl sm:text-4xl font-extrabold text-white font-mono">USA & EC</span>
+          <span class="text-xs uppercase font-mono text-slate-400 block mt-1">Gestión de Cuentas</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Casos de Éxito con Botón para abrir el Modal -->
+  <section id="casos" class="py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <span class="text-neon-cyan font-mono text-xs uppercase tracking-wider font-semibold">Portafolio Profesional</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-2">Casos de Éxito & Ecosistemas Digitales</h2>
+        <p class="text-slate-400 text-sm mt-3">Haz clic en cualquiera de los proyectos para ver el desglose técnico, tácticas de crecimiento y enlaces directos a sus sitios y perfiles de Instagram.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- Card 1: Lycan Fitness -->
+        <div class="glass-card rounded-2xl p-6 border border-dark-border hover:border-brand-500/60 transition-all flex flex-col justify-between group">
+          <div>
+            <div class="flex items-center justify-between text-xs font-mono text-neon-cyan mb-3">
+              <span>E-COMMERCE & ADS</span>
+              <span>2023 - ACTUAL</span>
             </div>
-            <div>
-              <div class="w-10 h-10 rounded-lg bg-black border border-white/20 flex items-center justify-center text-white font-extrabold text-sm mb-2">
-                LYCAN
-              </div>
-              <h3 class="text-lg font-bold font-display text-white">Lycan Fitness</h3>
-              <p class="text-xs text-neutral-400">USA & Ecuador Operations</p>
-            </div>
-          </div>
-          <div class="p-6 space-y-4">
-            <p class="text-xs sm:text-sm text-neutral-300 line-clamp-3">
+            <h3 class="text-xl font-bold text-white group-hover:text-neon-cyan transition-colors">Lycan Fitness</h3>
+            <p class="text-xs text-slate-400 font-mono mt-0.5">USA & Ecuador Operations</p>
+            <p class="text-slate-300 text-xs leading-relaxed mt-4">
               Estrategia de Paid Media (Meta & Google Ads) y catálogo dinámico para equipamiento fitness de alto rendimiento en EE. UU. y Ecuador.
             </p>
-            <div class="flex flex-wrap gap-1.5 pt-1">
-              <span class="px-2 py-0.5 rounded text-[11px] bg-neutral-900 border border-brand-border text-neutral-300">Shopify / Woo</span>
-              <span class="px-2 py-0.5 rounded text-[11px] bg-neutral-900 border border-brand-border text-neutral-300">Meta CAPI</span>
-              <span class="px-2 py-0.5 rounded text-[11px] bg-neutral-900 border border-brand-border text-neutral-300">ROAS Focus</span>
+            <div class="flex flex-wrap gap-1.5 mt-4">
+              <span class="px-2 py-0.5 rounded bg-dark-surface border border-dark-border text-[10px] font-mono text-slate-300">Shopify</span>
+              <span class="px-2 py-0.5 rounded bg-dark-surface border border-dark-border text-[10px] font-mono text-slate-300">WooCommerce</span>
+              <span class="px-2 py-0.5 rounded bg-dark-surface border border-dark-border text-[10px] font-mono text-slate-300">Meta CAPI</span>
+              <span class="px-2 py-0.5 rounded bg-dark-surface border border-dark-border text-[10px] font-mono text-slate-300">ROAS Focus</span>
             </div>
-            <div class="pt-2 flex items-center text-cyan-400 text-xs font-semibold gap-1.5 group-hover:translate-x-1 transition-transform">
+          </div>
+          <div class="mt-6 pt-4 border-t border-dark-border/60">
+            <button onclick="openModal('lycan')" class="w-full py-2.5 px-4 rounded-xl bg-dark-surface hover:bg-neon-cyan hover:text-black border border-dark-border text-white text-xs font-semibold tracking-wider uppercase transition-all flex items-center justify-center gap-2">
               <span>Ver Caso de Estudio</span>
-              <i class="fa-solid fa-arrow-right"></i>
-            </div>
+              <span>→</span>
+            </button>
           </div>
         </div>
 
-        <!-- CARD 2: HISPANA DE SEGUROS -->
-        <div class="project-card group glass-panel rounded-2xl overflow-hidden cursor-pointer" data-category="corporativo" onclick="openProjectModal('hispana')">
-          <div class="h-48 w-full bg-gradient-to-br from-[#171424] to-[#0A0B12] relative overflow-hidden border-b border-brand-border flex flex-col justify-between p-5">
-            <div class="flex justify-between items-start">
-              <span class="px-2.5 py-1 rounded-md text-[10px] font-bold uppercase tracking-wider bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">
-                Finanzas & Seguros
-              </span>
-              <span class="text-xs text-neutral-400 font-mono">2022 - 2026</span>
+        <!-- Card 2: Hispana de Seguros -->
+        <div class="glass-card rounded-2xl p-6 border border-dark-border hover:border-brand-500/60 transition-all flex flex-col justify-between group">
+          <div>
+            <div class="flex items-center justify-between text-xs font-mono text-neon-cyan mb-3">
+              <span>CORPORATIVO & SEGUROS</span>
+              <span>2022 - 2026</span>
             </div>
-            <div>
-              <div class="w-10 h-10 rounded-lg bg-indigo-900/40 border border-indigo-500/40 flex items-center justify-center text-indigo-400 text-lg mb-2">
-                <i class="fa-solid fa-shield-halved"></i>
-              </div>
-              <h3 class="text-lg font-bold font-display text-white">Hispana de Seguros</h3>
-              <p class="text-xs text-neutral-400">Seguros y Reaseguros S.A.</p>
-            </div>
-          </div>
-          <div class="p-6 space-y-4">
-            <p class="text-xs sm:text-sm text-neutral-300 line-clamp-3">
+            <h3 class="text-xl font-bold text-white group-hover:text-neon-cyan transition-colors">Hispana de Seguros</h3>
+            <p class="text-xs text-slate-400 font-mono mt-0.5">Hispana de Seguros y Reaseguros S.A.</p>
+            <p class="text-slate-300 text-xs leading-relaxed mt-4">
               Giro de 180° en la comunicación institucional, creación del canal en TikTok (@hispanadesegurosec) y aumento sostenido de leads calificados.
             </p>
-            <div class="flex flex-wrap gap-1.5 pt-1">
-              <span class="px-2 py-0.5 rounded text-[11px] bg-neutral-900 border border-brand-border text-neutral-300">Lead Generation</span>
-              <span class="px-2 py-0.5 rounded text-[11px] bg-neutral-900 border border-brand-border text-neutral-300">TikTok & Reels</span>
-              <span class="px-2 py-0.5 rounded text-[11px] bg-neutral-900 border border-brand-border text-neutral-300">ROI Positivo</span>
+            <div class="flex flex-wrap gap-1.5 mt-4">
+              <span class="px-2 py-0.5 rounded bg-dark-surface border border-dark-border text-[10px] font-mono text-slate-300">Lead Generation</span>
+              <span class="px-2 py-0.5 rounded bg-dark-surface border border-dark-border text-[10px] font-mono text-slate-300">TikTok & Reels</span>
+              <span class="px-2 py-0.5 rounded bg-dark-surface border border-dark-border text-[10px] font-mono text-slate-300">ROI Positivo</span>
             </div>
-            <div class="pt-2 flex items-center text-cyan-400 text-xs font-semibold gap-1.5 group-hover:translate-x-1 transition-transform">
+          </div>
+          <div class="mt-6 pt-4 border-t border-dark-border/60">
+            <button onclick="openModal('hispana')" class="w-full py-2.5 px-4 rounded-xl bg-dark-surface hover:bg-neon-cyan hover:text-black border border-dark-border text-white text-xs font-semibold tracking-wider uppercase transition-all flex items-center justify-center gap-2">
               <span>Ver Caso de Estudio</span>
-              <i class="fa-solid fa-arrow-right"></i>
-            </div>
+              <span>→</span>
+            </button>
           </div>
         </div>
 
-        <!-- CARD 3: LOGOS ACADEMY -->
-        <div class="project-card group glass-panel rounded-2xl overflow-hidden cursor-pointer" data-category="educacion" onclick="openProjectModal('logos')">
-          <div class="h-48 w-full bg-gradient-to-br from-[#131926] to-[#0A0B12] relative overflow-hidden border-b border-brand-border flex flex-col justify-between p-5">
-            <div class="flex justify-between items-start">
-              <span class="px-2.5 py-1 rounded-md text-[10px] font-bold uppercase tracking-wider bg-cyan-500/20 text-cyan-300 border border-cyan-500/30">
-                Educación Bilingüe
-              </span>
-              <span class="text-xs text-neutral-400 font-mono">2019 - 2022</span>
+        <!-- Card 3: Logos Academy -->
+        <div class="glass-card rounded-2xl p-6 border border-dark-border hover:border-brand-500/60 transition-all flex flex-col justify-between group">
+          <div>
+            <div class="flex items-center justify-between text-xs font-mono text-neon-cyan mb-3">
+              <span>EDUCACIÓN & ADMISIONES</span>
+              <span>2019 - 2022</span>
             </div>
-            <div>
-              <div class="w-10 h-10 rounded-lg bg-cyan-900/40 border border-cyan-500/40 flex items-center justify-center text-cyan-400 text-lg mb-2">
-                <i class="fa-solid fa-graduation-cap"></i>
-              </div>
-              <h3 class="text-lg font-bold font-display text-white">Logos Academy</h3>
-              <p class="text-xs text-neutral-400">Jefa de Marketing & Planner</p>
-            </div>
-          </div>
-          <div class="p-6 space-y-4">
-            <p class="text-xs sm:text-sm text-neutral-300 line-clamp-3">
+            <h3 class="text-xl font-bold text-white group-hover:text-neon-cyan transition-colors">Logos Academy</h3>
+            <p class="text-xs text-slate-400 font-mono mt-0.5">Educación Bilingüe</p>
+            <p class="text-slate-300 text-xs leading-relaxed mt-4">
               Liderazgo del equipo de marketing, optimización de pauta para admisiones escolares con Google Ads y gestión de canales digitales institucionales.
             </p>
-            <div class="flex flex-wrap gap-1.5 pt-1">
-              <span class="px-2 py-0.5 rounded text-[11px] bg-neutral-900 border border-brand-border text-neutral-300">Jefatura Marketing</span>
-              <span class="px-2 py-0.5 rounded text-[11px] bg-neutral-900 border border-brand-border text-neutral-300">Google Ads Search</span>
-              <span class="px-2 py-0.5 rounded text-[11px] bg-neutral-900 border border-brand-border text-neutral-300">Admisiones</span>
+            <div class="flex flex-wrap gap-1.5 mt-4">
+              <span class="px-2 py-0.5 rounded bg-dark-surface border border-dark-border text-[10px] font-mono text-slate-300">Jefatura Marketing</span>
+              <span class="px-2 py-0.5 rounded bg-dark-surface border border-dark-border text-[10px] font-mono text-slate-300">Google Ads Search</span>
+              <span class="px-2 py-0.5 rounded bg-dark-surface border border-dark-border text-[10px] font-mono text-slate-300">Admisiones</span>
             </div>
-            <div class="pt-2 flex items-center text-cyan-400 text-xs font-semibold gap-1.5 group-hover:translate-x-1 transition-transform">
+          </div>
+          <div class="mt-6 pt-4 border-t border-dark-border/60">
+            <button onclick="openModal('logos')" class="w-full py-2.5 px-4 rounded-xl bg-dark-surface hover:bg-neon-cyan hover:text-black border border-dark-border text-white text-xs font-semibold tracking-wider uppercase transition-all flex items-center justify-center gap-2">
               <span>Ver Caso de Estudio</span>
-              <i class="fa-solid fa-arrow-right"></i>
-            </div>
+              <span>→</span>
+            </button>
           </div>
         </div>
 
-        <!-- CARD 4: AS SOLUCIONES -->
-        <div class="project-card group glass-panel rounded-2xl overflow-hidden cursor-pointer" data-category="tech" onclick="openProjectModal('as')">
-          <div class="h-48 w-full bg-gradient-to-br from-[#19152a] to-[#0A0B12] relative overflow-hidden border-b border-brand-border flex flex-col justify-between p-5">
-            <div class="flex justify-between items-start">
-              <span class="px-2.5 py-1 rounded-md text-[10px] font-bold uppercase tracking-wider bg-purple-500/20 text-purple-300 border border-purple-500/30">
-                B2B & Servicios
-              </span>
-              <span class="text-xs text-neutral-400 font-mono">2026 - Actual</span>
+        <!-- Card 4: AS Soluciones -->
+        <div class="glass-card rounded-2xl p-6 border border-dark-border hover:border-brand-500/60 transition-all flex flex-col justify-between group">
+          <div>
+            <div class="flex items-center justify-between text-xs font-mono text-neon-cyan mb-3">
+              <span>B2B & SERVICIOS</span>
+              <span>2026 - ACTUAL</span>
             </div>
-            <div>
-              <div class="w-10 h-10 rounded-lg bg-purple-900/40 border border-purple-500/40 flex items-center justify-center text-purple-400 text-lg mb-2">
-                <i class="fa-solid fa-briefcase"></i>
-              </div>
-              <h3 class="text-lg font-bold font-display text-white">AS Soluciones</h3>
-              <p class="text-xs text-neutral-400">Soluciones Empresariales</p>
-            </div>
-          </div>
-          <div class="p-6 space-y-4">
-            <p class="text-xs sm:text-sm text-neutral-300 line-clamp-3">
+            <h3 class="text-xl font-bold text-white group-hover:text-neon-cyan transition-colors">AS Soluciones</h3>
+            <p class="text-xs text-slate-400 font-mono mt-0.5">Soluciones Empresariales</p>
+            <p class="text-slate-300 text-xs leading-relaxed mt-4">
               Construcción de identidad corporativa en LinkedIn e Instagram y propuesta de valor técnica orientada al segmento empresarial.
             </p>
-            <div class="flex flex-wrap gap-1.5 pt-1">
-              <span class="px-2 py-0.5 rounded text-[11px] bg-neutral-900 border border-brand-border text-neutral-300">Brand Identity</span>
-              <span class="px-2 py-0.5 rounded text-[11px] bg-neutral-900 border border-brand-border text-neutral-300">LinkedIn B2B</span>
-              <span class="px-2 py-0.5 rounded text-[11px] bg-neutral-900 border border-brand-border text-neutral-300">Consultoría</span>
+            <div class="flex flex-wrap gap-1.5 mt-4">
+              <span class="px-2 py-0.5 rounded bg-dark-surface border border-dark-border text-[10px] font-mono text-slate-300">Brand Identity</span>
+              <span class="px-2 py-0.5 rounded bg-dark-surface border border-dark-border text-[10px] font-mono text-slate-300">LinkedIn B2B</span>
+              <span class="px-2 py-0.5 rounded bg-dark-surface border border-dark-border text-[10px] font-mono text-slate-300">Consultoría</span>
             </div>
-            <div class="pt-2 flex items-center text-cyan-400 text-xs font-semibold gap-1.5 group-hover:translate-x-1 transition-transform">
+          </div>
+          <div class="mt-6 pt-4 border-t border-dark-border/60">
+            <button onclick="openModal('as_soluciones')" class="w-full py-2.5 px-4 rounded-xl bg-dark-surface hover:bg-neon-cyan hover:text-black border border-dark-border text-white text-xs font-semibold tracking-wider uppercase transition-all flex items-center justify-center gap-2">
               <span>Ver Caso de Estudio</span>
-              <i class="fa-solid fa-arrow-right"></i>
-            </div>
+              <span>→</span>
+            </button>
           </div>
         </div>
 
-        <!-- CARD 5: INGENIERÍA WEB & 3D -->
-        <div class="project-card group glass-panel rounded-2xl overflow-hidden cursor-pointer" data-category="tech" onclick="openProjectModal('techweb')">
-          <div class="h-48 w-full bg-gradient-to-br from-[#121c24] to-[#0A0B12] relative overflow-hidden border-b border-brand-border flex flex-col justify-between p-5">
-            <div class="flex justify-between items-start">
-              <span class="px-2.5 py-1 rounded-md text-[10px] font-bold uppercase tracking-wider bg-cyan-500/20 text-cyan-300 border border-cyan-500/30">
-                Tech & Desarrollo
-              </span>
-              <span class="text-xs text-neutral-400 font-mono">UCSG / DISTIMPART</span>
+        <!-- Card 5: Web & 3D Tech -->
+        <div class="glass-card rounded-2xl p-6 border border-dark-border hover:border-brand-500/60 transition-all flex flex-col justify-between group lg:col-span-2">
+          <div>
+            <div class="flex items-center justify-between text-xs font-mono text-neon-cyan mb-3">
+              <span>TECH & DESARROLLO</span>
+              <span>UCSG / DISTIMPART</span>
             </div>
-            <div>
-              <div class="w-10 h-10 rounded-lg bg-cyan-900/40 border border-cyan-500/40 flex items-center justify-center text-cyan-400 text-lg mb-2">
-                <i class="fa-solid fa-code"></i>
-              </div>
-              <h3 class="text-lg font-bold font-display text-white">Desarrollo Web & 3D</h3>
-              <p class="text-xs text-neutral-400">Tiendas, SEO & Accesibilidad</p>
-            </div>
-          </div>
-          <div class="p-6 space-y-4">
-            <p class="text-xs sm:text-sm text-neutral-300 line-clamp-3">
+            <h3 class="text-xl font-bold text-white group-hover:text-neon-cyan transition-colors">Desarrollo Web & 3D</h3>
+            <p class="text-xs text-slate-400 font-mono mt-0.5">Tiendas, SEO & Accesibilidad</p>
+            <p class="text-slate-300 text-xs leading-relaxed mt-4">
               Desarrollo de tiendas virtuales, modelado tridimensional en Blender y proyecto de mensajería accesible para personas no videntes.
             </p>
-            <div class="flex flex-wrap gap-1.5 pt-1">
-              <span class="px-2 py-0.5 rounded text-[11px] bg-neutral-900 border border-brand-border text-neutral-300">E-commerce Engineer</span>
-              <span class="px-2 py-0.5 rounded text-[11px] bg-neutral-900 border border-brand-border text-neutral-300">Blender 3D</span>
-              <span class="px-2 py-0.5 rounded text-[11px] bg-neutral-900 border border-brand-border text-neutral-300">HTML5/JS</span>
+            <div class="flex flex-wrap gap-1.5 mt-4">
+              <span class="px-2 py-0.5 rounded bg-dark-surface border border-dark-border text-[10px] font-mono text-slate-300">HTML5/JS/PHP</span>
+              <span class="px-2 py-0.5 rounded bg-dark-surface border border-dark-border text-[10px] font-mono text-slate-300">Blender 3D</span>
+              <span class="px-2 py-0.5 rounded bg-dark-surface border border-dark-border text-[10px] font-mono text-slate-300">Google My Business</span>
+              <span class="px-2 py-0.5 rounded bg-dark-surface border border-dark-border text-[10px] font-mono text-slate-300">Distinción Académica UCSG</span>
             </div>
-            <div class="pt-2 flex items-center text-cyan-400 text-xs font-semibold gap-1.5 group-hover:translate-x-1 transition-transform">
+          </div>
+          <div class="mt-6 pt-4 border-t border-dark-border/60">
+            <button onclick="openModal('tech')" class="w-full sm:w-auto px-6 py-2.5 rounded-xl bg-dark-surface hover:bg-neon-cyan hover:text-black border border-dark-border text-white text-xs font-semibold tracking-wider uppercase transition-all flex items-center justify-center gap-2">
               <span>Ver Caso de Estudio</span>
-              <i class="fa-solid fa-arrow-right"></i>
-            </div>
+              <span>→</span>
+            </button>
           </div>
         </div>
 
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- ================= STACK & COMPETENCIAS ================= -->
-    <section id="skills" class="py-20 bg-[#0B0D17]/80 border-t border-brand-border px-4 sm:px-6 lg:px-8">
-      <div class="max-w-7xl mx-auto">
-        <div class="text-center max-w-3xl mx-auto mb-16">
-          <span class="text-xs font-bold text-cyan-400 tracking-widest uppercase font-display block mb-2">Capacidades Estratégicas</span>
-          <h2 class="text-3xl sm:text-4xl font-bold font-display text-white">Stack Técnico & Especialidades</h2>
-          <p class="text-neutral-400 text-sm mt-3">
-            El balance ideal entre la mentalidad analítica del performance, el diseño visual de contenido y la base técnica de ingeniería de software.
+  <!-- Stack Tecnológico -->
+  <section id="stack" class="py-16 bg-dark-surface/30 border-t border-dark-border/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="glass-card rounded-2xl p-6 border border-dark-border">
+          <div class="text-neon-cyan text-3xl mb-3">📈</div>
+          <h4 class="text-lg font-bold text-white mb-2">Paid Media & Performance</h4>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Meta Ads (Facebook & Instagram Ads), Google Ads (Red de Búsqueda y Display), Meta Conversions API, Pixel tracking avanzado, segmentación de audiencias y optimización orientada a ROAS y CPA.
           </p>
         </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          
-          <!-- Performance & Ads -->
-          <div class="glass-panel rounded-2xl p-6 space-y-6">
-            <div class="flex items-center gap-3">
-              <div class="w-10 h-10 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 text-lg">
-                <i class="fa-solid fa-chart-line"></i>
-              </div>
-              <h3 class="text-lg font-bold font-display text-white">Paid Media & Data</h3>
-            </div>
-            
-            <ul class="space-y-3 text-sm text-neutral-300">
-              <li class="flex items-center justify-between py-1 border-b border-white/5">
-                <span>Google Ads (Search & Display)</span>
-                <span class="text-xs font-mono text-cyan-400">Certificada</span>
-              </li>
-              <li class="flex items-center justify-between py-1 border-b border-white/5">
-                <span>Meta Ads (Instagram & Facebook)</span>
-                <span class="text-xs font-mono text-cyan-400">Avanzado</span>
-              </li>
-              <li class="flex items-center justify-between py-1 border-b border-white/5">
-                <span>Google Analytics 4 & Tag Tracking</span>
-                <span class="text-xs font-mono text-cyan-400">Avanzado</span>
-              </li>
-              <li class="flex items-center justify-between py-1 border-b border-white/5">
-                <span>Optimización de ROAS & CPL</span>
-                <span class="text-xs font-mono text-cyan-400">Estrategia</span>
-              </li>
-              <li class="flex items-center justify-between py-1">
-                <span>Google Business Profile (SEO Local)</span>
-                <span class="text-xs font-mono text-cyan-400">Dominio</span>
-              </li>
-            </ul>
-          </div>
-
-          <!-- E-commerce & Web Dev -->
-          <div class="glass-panel rounded-2xl p-6 space-y-6">
-            <div class="flex items-center gap-3">
-              <div class="w-10 h-10 rounded-xl bg-indigo-500/10 border border-indigo-500/30 flex items-center justify-center text-indigo-400 text-lg">
-                <i class="fa-solid fa-layer-group"></i>
-              </div>
-              <h3 class="text-lg font-bold font-display text-white">E-commerce & Tech</h3>
-            </div>
-            
-            <ul class="space-y-3 text-sm text-neutral-300">
-              <li class="flex items-center justify-between py-1 border-b border-white/5">
-                <span>Shopify & WooCommerce Operations</span>
-                <span class="text-xs font-mono text-indigo-400">E-commerce</span>
-              </li>
-              <li class="flex items-center justify-between py-1 border-b border-white/5">
-                <span>HTML5, CSS3, JavaScript</span>
-                <span class="text-xs font-mono text-indigo-400">Nivel Medio</span>
-              </li>
-              <li class="flex items-center justify-between py-1 border-b border-white/5">
-                <span>PHP, MySQL & CMS (Joomla/WP)</span>
-                <span class="text-xs font-mono text-indigo-400">Ingeniería</span>
-              </li>
-              <li class="flex items-center justify-between py-1 border-b border-white/5">
-                <span>Sistema Operativo Linux Ubuntu</span>
-                <span class="text-xs font-mono text-indigo-400">Avanzado</span>
-              </li>
-              <li class="flex items-center justify-between py-1">
-                <span>Diseño y Modelado 3D en Blender</span>
-                <span class="text-xs font-mono text-indigo-400">Avanzado</span>
-              </li>
-            </ul>
-          </div>
-
-          <!-- Creatividad & Brand Ops -->
-          <div class="glass-panel rounded-2xl p-6 space-y-6">
-            <div class="flex items-center gap-3">
-              <div class="w-10 h-10 rounded-xl bg-purple-500/10 border border-purple-500/30 flex items-center justify-center text-purple-400 text-lg">
-                <i class="fa-solid fa-wand-magic-sparkles"></i>
-              </div>
-              <h3 class="text-lg font-bold font-display text-white">Content & Branding</h3>
-            </div>
-            
-            <ul class="space-y-3 text-sm text-neutral-300">
-              <li class="flex items-center justify-between py-1 border-b border-white/5">
-                <span>Adobe Photoshop & Illustrator</span>
-                <span class="text-xs font-mono text-purple-400">Avanzado</span>
-              </li>
-              <li class="flex items-center justify-between py-1 border-b border-white/5">
-                <span>Video Vertical (TikTok & Reels)</span>
-                <span class="text-xs font-mono text-purple-400">Guion & Trend</span>
-              </li>
-              <li class="flex items-center justify-between py-1 border-b border-white/5">
-                <span>Liderazgo de Equipos de Marketing</span>
-                <span class="text-xs font-mono text-purple-400">Dirección</span>
-              </li>
-              <li class="flex items-center justify-between py-1 border-b border-white/5">
-                <span>Inglés (Nivel B2) & Español Nativo</span>
-                <span class="text-xs font-mono text-purple-400">Bilingüe</span>
-              </li>
-              <li class="flex items-center justify-between py-1">
-                <span>Excel & PowerPoint Avanzado</span>
-                <span class="text-xs font-mono text-purple-400">Reportes C-Level</span>
-              </li>
-            </ul>
-          </div>
-
+        <div class="glass-card rounded-2xl p-6 border border-dark-border">
+          <div class="text-neon-violet text-3xl mb-3">🛒</div>
+          <h4 class="text-lg font-bold text-white mb-2">E-commerce & Web Tech</h4>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Shopify, WooCommerce, Google Analytics 4, Tag Manager, HTML5, JavaScript, arquitectura de catálogos y optimización de conversión (CRO) basada en ingeniería comercial.
+          </p>
+        </div>
+        <div class="glass-card rounded-2xl p-6 border border-dark-border">
+          <div class="text-neon-amber text-3xl mb-3">🎨</div>
+          <h4 class="text-lg font-bold text-white mb-2">Creatividad & Dirección</h4>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Adobe Photoshop, Illustrator, Blender 3D, copywriting persuasivo para pauta publicitaria, guiones para TikTok/Reels y coordinación de equipos de marketing institucional.
+          </p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- ================= TRAYECTORIA & EDUCACIÓN ================= -->
-    <section id="trayectoria" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-        
-        <!-- Línea Cronológica -->
-        <div>
-          <span class="text-xs font-bold text-cyan-400 tracking-widest uppercase font-display block mb-2">Línea de Tiempo</span>
-          <h2 class="text-2xl sm:text-3xl font-bold font-display text-white mb-8">Experiencia de Gestión</h2>
-
-          <div class="space-y-8 relative before:absolute before:inset-0 before:left-3.5 before:w-0.5 before:bg-brand-border">
-            
-            <!-- Lycan Fitness -->
-            <div class="relative pl-10">
-              <div class="absolute left-1.5 top-1.5 w-4 h-4 rounded-full bg-cyan-400 border-4 border-[#08090E]"></div>
-              <span class="text-xs text-cyan-400 font-mono font-semibold">2023 - Actualidad</span>
-              <h4 class="text-base font-bold text-white">Freelance: Digital Strategist & Paid Media</h4>
-              <p class="text-xs text-neutral-400 mb-2">Lycan Fitness Company (USA / Ecuador)</p>
-              <p class="text-xs text-neutral-300 leading-relaxed">
-                Supervisión de pauta publicitaria en Meta Ads, optimización de catálogo de productos e-commerce y soporte estratégico en aperturas internacionales.
-              </p>
-            </div>
-
-            <!-- Hispana de Seguros -->
-            <div class="relative pl-10">
-              <div class="absolute left-1.5 top-1.5 w-4 h-4 rounded-full bg-indigo-500 border-4 border-[#08090E]"></div>
-              <span class="text-xs text-indigo-400 font-mono font-semibold">Nov 2022 - Mar 2026</span>
-              <h4 class="text-base font-bold text-white">Social Media Manager</h4>
-              <p class="text-xs text-neutral-400 mb-2">Hispana de Seguros y Reaseguros S.A.</p>
-              <p class="text-xs text-neutral-300 leading-relaxed">
-                Giro integral en la comunicación interna y externa. Crecimiento de leads calificados, engagement y dinamización del canal de TikTok.
-              </p>
-            </div>
-
-            <!-- Logos Academy -->
-            <div class="relative pl-10">
-              <div class="absolute left-1.5 top-1.5 w-4 h-4 rounded-full bg-cyan-400 border-4 border-[#08090E]"></div>
-              <span class="text-xs text-cyan-400 font-mono font-semibold">Jul 2019 - Oct 2022</span>
-              <h4 class="text-base font-bold text-white">Jefa Encargada de Marketing (8 meses) / Social Media Manager</h4>
-              <p class="text-xs text-neutral-400 mb-2">Logos Academy</p>
-              <p class="text-xs text-neutral-300 leading-relaxed">
-                Dirección del equipo de comunicación, planificación de pauta en Google Ads y Meta Ads para admisiones, administración de web y landing pages.
-              </p>
-            </div>
-
-          </div>
-        </div>
-
-        <!-- Educación & Honores -->
-        <div class="space-y-8">
-          <div>
-            <span class="text-xs font-bold text-cyan-400 tracking-widest uppercase font-display block mb-2">Formación de Élite</span>
-            <h2 class="text-2xl sm:text-3xl font-bold font-display text-white mb-8">Grados & Reconocimientos</h2>
-
-            <div class="space-y-4">
-              
-              <div class="p-5 rounded-xl glass-panel">
-                <div class="flex items-start justify-between">
-                  <div>
-                    <h4 class="text-base font-bold text-white">Máster en Marketing Online & Comercio Electrónico</h4>
-                    <p class="text-xs text-cyan-400 font-medium">EAE Business School • Madrid, España</p>
-                  </div>
-                  <span class="text-xs font-mono text-neutral-400">2018 - 2019</span>
-                </div>
-              </div>
-
-              <div class="p-5 rounded-xl glass-panel">
-                <div class="flex items-start justify-between">
-                  <div>
-                    <h4 class="text-base font-bold text-white">Ingeniería en Comercio Electrónico</h4>
-                    <p class="text-xs text-indigo-400 font-medium">Universidad Católica de Santiago de Guayaquil (UCSG)</p>
-                  </div>
-                  <span class="text-xs font-mono text-neutral-400">2014 - 2018</span>
-                </div>
-              </div>
-
-              <!-- Reconocimientos Oficiales -->
-              <div class="p-5 rounded-xl bg-neutral-900 border border-brand-border space-y-3">
-                <h5 class="text-xs font-bold text-neutral-300 uppercase tracking-wider">Distinciones Académicas</h5>
-                <ul class="text-xs text-neutral-400 space-y-2">
-                  <li class="flex items-center gap-2">
-                    <i class="fa-solid fa-award text-cyan-400"></i>
-                    Premio Benemérita Sociedad Filantrópica del Guayas (2016-2017 & 2017-2018)
-                  </li>
-                  <li class="flex items-center gap-2">
-                    <i class="fa-solid fa-medal text-indigo-400"></i>
-                    Premio por Distinción Académica UCSG (Dos periodos consecutivos)
-                  </li>
-                  <li class="flex items-center gap-2">
-                    <i class="fa-solid fa-universal-access text-cyan-400"></i>
-                    Proyecto Integrador: Mensajería web accesible para personas no videntes.
-                  </li>
-                </ul>
-              </div>
-
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ================= FOOTER ================= -->
-    <footer class="border-t border-brand-border bg-[#05060A] py-16 px-4 sm:px-6 lg:px-8">
-      <div class="max-w-4xl mx-auto text-center space-y-6">
-        
-        <!-- Logo Footer en fondo blanco nítido -->
-        <div class="h-16 w-48 rounded-2xl bg-white border border-white/70 px-4 py-2 mx-auto shadow-xl flex items-center justify-center">
-          <img src="logo.png" alt="Logo MaBeatriz" class="h-full w-auto object-contain">
-        </div>
-
-        <h2 class="text-3xl sm:text-4xl font-extrabold font-display text-white">
-          ¿Conversamos sobre tu próximo hito de <span class="text-glow-gradient">crecimiento digital</span>?
-        </h2>
-        <p class="text-neutral-400 text-sm sm:text-base max-w-xl mx-auto">
-          Disponible para consultoría estratégica, optimización de pauta en Google/Meta y dirección de marca para empresas en Ecuador e internacionales.
-        </p>
-        
-        <div class="flex flex-wrap items-center justify-center gap-4 pt-4">
-          <a href="https://wa.me/593969247829?text=Hola%20María%20Beatriz,%20quisiera%20coordinar%20una%20reunión%20de%20diagnóstico" target="_blank" class="px-6 py-3.5 rounded-xl bg-gradient-to-r from-cyan-500 to-indigo-600 text-white font-bold hover:brightness-110 transition-all font-display text-sm flex items-center gap-2 shadow-xl shadow-indigo-500/25">
-            <i class="fa-brands fa-whatsapp text-lg"></i>
-            <span>Iniciar Contacto vía WhatsApp</span>
-          </a>
-          <button onclick="togglePitchDeck()" class="px-6 py-3.5 rounded-xl bg-neutral-900 hover:bg-neutral-800 text-white border border-brand-border font-semibold text-sm flex items-center gap-2 transition-all">
-            <i class="fa-solid fa-presentation-screen text-cyan-400"></i>
-            <span>Ver Formato Presentación (Deck)</span>
-          </button>
-        </div>
-
-        <div class="pt-12 text-xs text-neutral-500 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <span>© 2026 María Beatriz Valencia Robles • Digital Marketer & E-commerce Engineer</span>
-          <span>Guayaquil, Ecuador • Operación Internacional</span>
-        </div>
-      </div>
-    </footer>
-  </main>
-
-  <!-- ================= PITCH DECK MODE (SLIDE PRESENTATION) ================= -->
-  <div id="pitchDeckView" class="hidden fixed inset-0 z-50 bg-[#06070B] flex flex-col justify-between p-4 sm:p-8">
-    
-    <!-- Top Deck Header -->
-    <div class="flex items-center justify-between border-b border-brand-border pb-4 max-w-7xl mx-auto w-full">
+  <!-- Footer / Contacto -->
+  <footer id="contacto" class="py-12 border-t border-dark-border/80 glass-card">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6">
       <div class="flex items-center gap-3">
-        <div class="h-9 px-2 py-0.5 rounded-lg bg-white flex items-center justify-center border border-white/40">
-          <img src="logo.png" alt="Logo" class="h-7 w-auto object-contain">
+        <div class="w-10 h-10 rounded-xl bg-white p-1 flex items-center justify-center">
+          <img src="logo.png" alt="Logo" class="w-full h-full object-contain">
         </div>
-        <span class="font-display font-bold text-white text-sm">Executive Deck | María Beatriz Valencia</span>
+        <div>
+          <span class="font-bold text-sm text-white block">María Beatriz Valencia Robles</span>
+          <span class="text-[11px] text-slate-400 font-mono">Guayaquil, Ecuador • Consultora Independiente</span>
+        </div>
       </div>
-      <div class="flex items-center gap-4">
-        <span id="deckSlideCounter" class="text-xs font-mono text-neutral-400">Slide 1 de 5</span>
-        <button onclick="togglePitchDeck()" class="px-3 py-1.5 rounded-lg bg-neutral-900 hover:bg-neutral-800 text-neutral-300 text-xs border border-brand-border flex items-center gap-1.5">
-          <i class="fa-solid fa-xmark"></i> Salir del Deck
+      <div class="flex items-center gap-4 text-xs font-mono">
+        <a href="https://wa.me/593969247829" target="_blank" class="text-neon-cyan hover:underline">WhatsApp: +593 969 247 829</a>
+        <span class="text-slate-600">•</span>
+        <a href="mailto:mabeatriz.vr@hotmail.com" class="text-slate-300 hover:underline">mabeatriz.vr@hotmail.com</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ======================================================== -->
+  <!-- MODAL DE CASO DE ESTUDIO (100% RESPONSIVE + BOTÓN X FIJO) -->
+  <!-- ======================================================== -->
+  <div id="modalContainer" class="fixed inset-0 z-50 hidden flex items-center justify-center p-3 sm:p-6 bg-black/80 backdrop-blur-md transition-opacity">
+    
+    <!-- Backdrop Clickeable para Cerrar -->
+    <div class="absolute inset-0" onclick="closeModal()"></div>
+
+    <!-- Contenedor del Modal con scroll y botón X fijo -->
+    <div class="relative w-full max-w-2xl max-h-[90vh] bg-dark-surface border border-dark-border rounded-2xl sm:rounded-3xl shadow-2xl flex flex-col z-10 overflow-hidden">
+      
+      <!-- Cabecera Sticky con Botón X Visible y Fácil de Tocar -->
+      <div class="sticky top-0 z-20 flex items-center justify-between px-5 sm:px-8 py-4 bg-dark-surface/95 border-b border-dark-border backdrop-blur-md">
+        <div>
+          <span id="modalCategory" class="text-[10px] sm:text-xs font-mono text-neon-cyan uppercase tracking-wider block font-semibold">CATEGORÍA</span>
+          <h3 id="modalTitle" class="text-lg sm:text-2xl font-bold text-white tracking-tight leading-tight">Título del Caso</h3>
+        </div>
+
+        <!-- Botón de Cerrar (X) con Área Táctil Amplia y Efecto Hover -->
+        <button onclick="closeModal()" aria-label="Cerrar modal" class="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-slate-800/90 hover:bg-red-500/20 border border-slate-700 hover:border-red-400 text-slate-300 hover:text-red-400 flex items-center justify-center text-xl font-bold transition-all shadow-md focus:outline-none">
+          ✕
         </button>
       </div>
-    </div>
 
-    <!-- Deck Content Area -->
-    <div class="max-w-5xl mx-auto w-full flex-1 flex items-center justify-center my-6">
-      
-      <!-- SLIDE 1: PROPUESTA DE VALOR -->
-      <div id="slide-0" class="deck-slide w-full glass-panel p-8 sm:p-12 rounded-3xl space-y-6">
-        <span class="px-3 py-1 rounded-full text-xs font-bold bg-cyan-500/20 text-cyan-300 border border-cyan-500/30">01. Propuesta de Valor</span>
-        <h2 class="text-3xl sm:text-5xl font-extrabold font-display text-white">Estrategia Digital con <span class="text-glow-gradient">Rigor de Ingeniería</span></h2>
-        <p class="text-neutral-300 text-base sm:text-lg leading-relaxed">
-          Combino la agilidad creativa del social media con la precisión matemática de la ingeniería: pauta optimizada por ROAS, analítica avanzada de conversión y construcción de marcas que venden.
-        </p>
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4">
-          <div class="p-4 rounded-xl bg-neutral-950 border border-brand-border">
-            <p class="text-cyan-400 font-bold text-xl font-display">Paid Media (Google & Meta)</p>
-            <p class="text-xs text-neutral-400 mt-1">Estrategias de prospección y remarketing para maximizar el ROAS.</p>
-          </div>
-          <div class="p-4 rounded-xl bg-neutral-950 border border-brand-border">
-            <p class="text-indigo-400 font-bold text-xl font-display">Ingeniería E-commerce</p>
-            <p class="text-xs text-neutral-400 mt-1">Shopify, WooCommerce, arquitecturas web y analítica GA4.</p>
-          </div>
-          <div class="p-4 rounded-xl bg-neutral-950 border border-brand-border">
-            <p class="text-purple-400 font-bold text-xl font-display">Autoridad de Marca</p>
-            <p class="text-xs text-neutral-400 mt-1">TikTok corporativo, LinkedIn B2B y contenido editorial de alto impacto.</p>
+      <!-- Cuerpo del Modal con Scroll Suave -->
+      <div class="p-5 sm:p-8 overflow-y-auto custom-scrollbar space-y-6 text-sm text-slate-300 leading-relaxed">
+        
+        <div>
+          <span class="text-[11px] font-mono text-slate-400 uppercase tracking-wider block mb-1">Periodo & Trayectoria</span>
+          <p id="modalDate" class="text-white font-medium text-xs sm:text-sm">Fechas de gestión</p>
+        </div>
+
+        <!-- Contexto & Rol -->
+        <div class="p-4 rounded-xl bg-dark-bg/60 border border-dark-border/60">
+          <h4 class="text-xs font-mono uppercase tracking-wider text-neon-cyan font-semibold mb-2">Contexto & Rol</h4>
+          <p id="modalRole" class="text-xs sm:text-sm text-slate-300">Descripción del contexto...</p>
+        </div>
+
+        <!-- Desafío -->
+        <div class="p-4 rounded-xl bg-gradient-to-r from-neon-cyan/5 to-transparent border-l-2 border-neon-cyan">
+          <h4 class="text-xs font-mono uppercase tracking-wider text-neon-cyan font-semibold mb-1">El Desafío de Crecimiento</h4>
+          <p id="modalChallenge" class="text-xs sm:text-sm text-slate-200">Detalles del desafío...</p>
+        </div>
+
+        <!-- Tácticas & Estrategia -->
+        <div>
+          <h4 class="text-xs font-mono uppercase tracking-wider text-neon-violet font-semibold mb-3">Tácticas & Estrategia Ejecutada</h4>
+          <ul id="modalTactics" class="space-y-2 text-xs sm:text-sm text-slate-300">
+            <!-- Items dinámicos -->
+          </ul>
+        </div>
+
+        <!-- Resultados & Valor Aportado -->
+        <div class="p-4 rounded-xl bg-dark-bg/80 border border-dark-border">
+          <h4 class="text-xs font-mono uppercase tracking-wider text-white font-semibold mb-3">Resultados & Valor Aportado</h4>
+          <ul id="modalResults" class="space-y-2 text-xs sm:text-sm text-slate-300">
+            <!-- Items dinámicos -->
+          </ul>
+        </div>
+
+        <!-- Enlaces a Sitios y Redes -->
+        <div class="pt-2">
+          <h4 class="text-xs font-mono uppercase tracking-wider text-slate-400 font-semibold mb-3">Enlaces Oficiales & Redes</h4>
+          <div id="modalLinks" class="flex flex-wrap gap-2.5">
+            <!-- Enlaces dinámicos -->
           </div>
         </div>
+
       </div>
 
-      <!-- SLIDE 2: LYCAN FITNESS -->
-      <div id="slide-1" class="deck-slide hidden w-full glass-panel p-8 sm:p-12 rounded-3xl space-y-6">
-        <span class="px-3 py-1 rounded-full text-xs font-bold bg-cyan-500/20 text-cyan-300 border border-cyan-500/30">02. E-commerce Global</span>
-        <h2 class="text-3xl sm:text-4xl font-bold font-display text-white">Lycan Fitness (USA & Ecuador)</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm text-neutral-300">
-          <div class="space-y-3">
-            <h4 class="font-bold text-white text-base">El Reto</h4>
-            <p>Escalar ventas en tiendas e-commerce transaccionales compitiendo en el exigente mercado deportivo de Estados Unidos y liderando en Ecuador.</p>
-            <h4 class="font-bold text-white text-base">Tácticas Clave</h4>
-            <p>Meta Conversions API (CAPI), catálogos dinámicos (DPA), creativos técnicos de producto y segmentación para atletas y gimnasios.</p>
-          </div>
-          <div class="p-6 rounded-2xl bg-neutral-950 border border-brand-border space-y-4 flex flex-col justify-center">
-            <div class="text-2xl font-bold font-display text-cyan-400">Canales Oficiales</div>
-            <p class="text-xs text-neutral-400 font-mono">USA: lycanfitness.com | @lycanfitness</p>
-            <p class="text-xs text-neutral-400 font-mono">EC: lycan-fitness.com | @lycanfitnessec</p>
-            <div class="pt-2 text-xs text-neutral-300 border-t border-brand-border">
-              ✓ Posicionamiento orgánico de comunidad y compras recurrentes en Shopify.
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- SLIDE 3: HISPANA DE SEGUROS -->
-      <div id="slide-2" class="deck-slide hidden w-full glass-panel p-8 sm:p-12 rounded-3xl space-y-6">
-        <span class="px-3 py-1 rounded-full text-xs font-bold bg-cyan-500/20 text-cyan-300 border border-cyan-500/30">03. Finanzas & Lead Generation</span>
-        <h2 class="text-3xl sm:text-4xl font-bold font-display text-white">Hispana de Seguros y Reaseguros</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm text-neutral-300">
-          <div class="space-y-3">
-            <h4 class="font-bold text-white text-base">Giro Estratégico de 180°</h4>
-            <p>Transformación de una comunicación corporativa tradicional a un canal activo y humano en TikTok, Instagram y LinkedIn.</p>
-            <h4 class="font-bold text-white text-base">Embudo de Leads & Ventas</h4>
-            <p>Campañas de pauta conectadas con cotizaciones de seguros en tiempo real, garantizando retorno de inversión positivo en cada acción.</p>
-          </div>
-          <div class="p-6 rounded-2xl bg-neutral-950 border border-brand-border space-y-4 flex flex-col justify-center">
-            <div class="text-2xl font-bold font-display text-indigo-400">Resultados Demostrados</div>
-            <p class="text-sm text-neutral-300">"Incremento constante en prospectos comerciales calificados, ROI positivo y renovación visual completa de la marca."</p>
-            <span class="text-xs text-neutral-400">Canales: hispanadeseguros.com | @hispanadesegurosec</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- SLIDE 4: LOGOS ACADEMY -->
-      <div id="slide-3" class="deck-slide hidden w-full glass-panel p-8 sm:p-12 rounded-3xl space-y-6">
-        <span class="px-3 py-1 rounded-full text-xs font-bold bg-cyan-500/20 text-cyan-300 border border-cyan-500/30">04. Institución Educativa</span>
-        <h2 class="text-3xl sm:text-4xl font-bold font-display text-white">Logos Academy (Jefatura de Marketing)</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm text-neutral-300">
-          <div class="space-y-3">
-            <h4 class="font-bold text-white text-base">Gestión Integral de Admisiones</h4>
-            <p>Planificación de campañas omnicanal durante ciclos de admisiones, dirigiendo el equipo y coordinando el portal web y redes sociales.</p>
-            <h4 class="font-bold text-white text-base">Google Ads & Red de Búsqueda</h4>
-            <p>Captación de familias con alta intención de matrícula en Guayaquil, landing pages específicas y seguimiento de métricas.</p>
-          </div>
-          <div class="p-6 rounded-2xl bg-neutral-950 border border-brand-border space-y-4 flex flex-col justify-center">
-            <div class="text-2xl font-bold font-display text-cyan-400">Canales Gestionados</div>
-            <ul class="text-xs text-neutral-300 space-y-2">
-              <li>✓ Portal institucional logosacademy.edu.ec</li>
-              <li>✓ Cuenta oficial @logosacademy_edu</li>
-              <li>✓ Cumplimiento continuo de metas de admisiones</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <!-- SLIDE 5: CONTACTO -->
-      <div id="slide-4" class="deck-slide hidden w-full glass-panel p-8 sm:p-12 rounded-3xl space-y-6 text-center">
-        <span class="px-3 py-1 rounded-full text-xs font-bold bg-cyan-500/20 text-cyan-300 border border-cyan-500/30">05. Próximo Paso</span>
-        <h2 class="text-3xl sm:text-5xl font-extrabold font-display text-white">¿Agendamos una Sesión de Trabajo?</h2>
-        <p class="text-neutral-300 text-base max-w-xl mx-auto">
-          Analicemos el estado actual de tu marca, las oportunidades de optimización en pauta y el plan para escalar resultados este trimestre.
-        </p>
-
-        <div class="flex flex-wrap justify-center gap-4 pt-6">
-          <a href="https://wa.me/593969247829" target="_blank" class="px-6 py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-indigo-600 text-white font-bold hover:brightness-110 transition-all flex items-center gap-2">
-            <i class="fa-brands fa-whatsapp text-lg"></i>
-            WhatsApp (+593 969 247 829)
-          </a>
-          <a href="mailto:mabeatriz.vr@hotmail.com" class="px-6 py-3 rounded-xl bg-neutral-900 text-white border border-brand-border hover:bg-neutral-800 flex items-center gap-2">
-            <i class="fa-solid fa-envelope text-cyan-400"></i>
-            mabeatriz.vr@hotmail.com
-          </a>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- Bottom Deck Controls -->
-    <div class="flex items-center justify-between max-w-5xl mx-auto w-full pt-4 border-t border-brand-border">
-      <button onclick="prevSlide()" class="px-4 py-2 rounded-lg bg-neutral-900 border border-brand-border text-neutral-200 hover:text-white flex items-center gap-2 text-sm font-semibold">
-        <i class="fa-solid fa-chevron-left"></i> Anterior
-      </button>
-
-      <!-- Dots Indicator -->
-      <div class="flex items-center gap-2" id="deckDots">
-        <span class="w-2.5 h-2.5 rounded-full bg-cyan-400"></span>
-        <span class="w-2.5 h-2.5 rounded-full bg-neutral-700"></span>
-        <span class="w-2.5 h-2.5 rounded-full bg-neutral-700"></span>
-        <span class="w-2.5 h-2.5 rounded-full bg-neutral-700"></span>
-        <span class="w-2.5 h-2.5 rounded-full bg-neutral-700"></span>
-      </div>
-
-      <button onclick="nextSlide()" class="px-4 py-2 rounded-lg bg-cyan-500 text-black hover:bg-cyan-400 flex items-center gap-2 text-sm font-bold">
-        Siguiente <i class="fa-solid fa-chevron-right"></i>
-      </button>
-    </div>
-
-  </div>
-
-  <!-- ================= CASE STUDY DETAIL MODAL ================= -->
-  <div id="projectModal" class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-md flex items-center justify-center p-4 overflow-y-auto">
-    <div id="modalBox" class="glass-panel bg-[#0E101A] border border-cyan-500/40 w-full max-w-3xl rounded-3xl overflow-hidden shadow-2xl my-8 relative modal-enter">
-      
-      <!-- Close Button -->
-      <button onclick="closeProjectModal()" class="absolute top-5 right-5 z-20 w-10 h-10 rounded-full bg-neutral-900 border border-brand-border text-neutral-300 hover:text-white flex items-center justify-center transition-colors">
-        <i class="fa-solid fa-xmark text-lg"></i>
-      </button>
-
-      <!-- Modal Dynamic Body -->
-      <div id="modalContent" class="p-6 sm:p-8 space-y-6">
-        <!-- Inyectado por JS -->
+      <!-- Pie del Modal con Botón Extra de Cerrar -->
+      <div class="p-4 sm:p-5 bg-dark-surface/90 border-t border-dark-border flex justify-end">
+        <button onclick="closeModal()" class="w-full sm:w-auto px-6 py-2.5 rounded-xl bg-dark-surface hover:bg-slate-800 border border-dark-border text-slate-200 text-xs font-mono uppercase tracking-wider font-semibold transition-all">
+          Cerrar Caso
+        </button>
       </div>
 
     </div>
   </div>
 
-  <!-- ================= JAVASCRIPT LOGIC ================= -->
+  <!-- Script para la Lógica Interactiva del Modal -->
   <script>
-    const projectsData = {
+    const casesData = {
       lycan: {
+        category: "E-COMMERCE & PERFORMANCE",
         title: "Lycan Fitness (USA & Ecuador)",
-        category: "E-commerce Internacional & Performance Marketing",
-        period: "2023 - Actualidad",
-        overview: "Gestión estratégica y técnica del ecosistema digital de Lycan Fitness Company, marca internacional de equipamiento de entrenamiento funcional y deportes de fuerza. Trabajo continuo tanto para la operación en Ecuador como para el mercado de EE. UU.",
-        challenge: "Impulsar ventas de equipamiento deportivo en tiendas Shopify y WooCommerce, compitiendo en el exigente mercado estadounidense con costos publicitarios optimizados.",
+        date: "2023 – Actualidad",
+        role: "Consultoría y gestión de Paid Media para la marca internacional de equipamiento de entrenamiento de alta exigencia.",
+        challenge: "Escalar ventas en las plataformas Shopify y WooCommerce optimizando el retorno de inversión publicitaria (ROAS) y expandiendo el alcance de marca en EE. UU.",
         tactics: [
-          "Diseño y despliegue de estructuras de campañas en Meta Ads (CBO/ABO) y Google Ads.",
-          "Configuración técnica de Meta Conversions API (CAPI) para sortear pérdidas de datos de iOS y medir compras con exactitud.",
-          "Estrategia de contenidos en Instagram destacando manuales de ensamblaje, pruebas de carga de racks y testimonios de atletas.",
-          "Optimización constante de la tasa de conversión en las tiendas online lycanfitness.com y lycan-fitness.com."
+          "Campañas de prospección y retargeting en Meta Ads y Google Ads Search & Shopping.",
+          "Implementación técnica de Meta Conversions API (CAPI) y Google Tag Manager para atribución de compra sin pérdidas de señal.",
+          "Estrategia de contenido visual con atletas, producto en uso y tutoriales de ensamble para reducir objeciones.",
+          "Campañas específicas de lanzamiento para nuevas líneas de fuerza y accesorios funcionales."
         ],
         results: [
-          "Presencia transaccional activa en Estados Unidos y consolidación en Ecuador.",
-          "Crecimiento constante en pedidos de Shopify y retorno de inversión publicitaria sostenido.",
-          "Comunidad fiel de atletas y gimnasios afiliados a través de Instagram."
+          "ROAS positivo sostenido y escalabilidad de pauta en mercados bilingües.",
+          "Consolidación de catálogo dinámico sincronizado en tiempo real.",
+          "Crecimiento del valor promedio de pedido (AOV) mediante bundles de producto."
         ],
         links: [
-          { name: "Tienda USA", url: "https://lycanfitness.com/", icon: "fa-globe" },
-          { name: "Tienda Ecuador", url: "https://lycan-fitness.com/", icon: "fa-cart-shopping" },
-          { name: "Instagram USA", url: "https://www.instagram.com/lycanfitness/", icon: "fa-instagram" },
-          { name: "Instagram Ecuador", url: "https://www.instagram.com/lycanfitnessec/", icon: "fa-instagram" }
+          { text: "🌐 Web USA (lycanfitness.com)", url: "https://lycanfitness.com/" },
+          { text: "🌐 Web Ecuador (lycan-fitness.com)", url: "https://lycan-fitness.com/" },
+          { text: "📸 Instagram Global (@lycanfitness)", url: "https://www.instagram.com/lycanfitness/" },
+          { text: "📸 Instagram Ecuador (@lycanfitnessec)", url: "https://www.instagram.com/lycanfitnessec/" }
         ]
       },
       hispana: {
+        category: "CORPORATIVO & SEGUROS",
         title: "Hispana de Seguros y Reaseguros",
-        category: "Seguros Corporativos, B2B & Lead Generation",
-        period: "Noviembre 2022 - Marzo 2026",
-        overview: "Liderazgo de la estrategia digital para una de las aseguradoras más prestigiosas de Ecuador, logrando un giro total de 180° en la comunicación institucional y dinamizando la captación de prospectos.",
-        challenge: "Humanizar un rubro tradicionalmente distante como las pólizas de seguros, captar nuevos públicos jóvenes y generar cotizaciones comerciales medibles.",
+        date: "Noviembre 2022 – Marzo 2026",
+        role: "Gestión como Social Media Manager liderando un giro de 180° en la comunicación institucional y comercial de la aseguradora.",
+        challenge: "Modernizar una categoría tradicionalmente distante, conectar con audiencias jóvenes y estructurar un embudo digital de captación de leads comerciales con ROI positivo.",
         tactics: [
-          "Apertura del canal oficial en TikTok (@hispanadesegurosec), utilizando humor inteligente y educación preventiva.",
-          "Segmentación avanzada en Meta Ads y Google Ads para seguros de vehículos, personas y fianzas empresariales.",
-          "Diseño de embudos hacia landing pages y WhatsApp corporativo para cotizaciones ágiles.",
-          "Consolidación de la presencia de liderazgo corporativo en LinkedIn."
+          "Reestructuración completa del lenguaje visual y tono de comunicación en todos los canales digitales.",
+          "Lanzamiento y consolidación de la cuenta corporativa en TikTok (@hispanadesegurosec) con contenido educativo y ágil.",
+          "Campañas continuas en Meta Ads y Google Ads para captación de cotizaciones de seguros vehiculares, de vida y salud.",
+          "Planificación de comunicación interna y externa alineada a los objetivos de los asesores comerciales."
         ],
         results: [
-          "Retorno de inversión publicitaria (ROI) positivo en todas las campañas efectuadas.",
-          "Aumento significativo en el flujo mensual de clientes potenciales hacia los ejecutivos comerciales.",
-          "Imagen de marca rejuvenecida con alta tasa de interacción en TikTok e Instagram."
+          "Giro de 180° en la percepción de marca y crecimiento de KPIs (engagement, seguidores y alcance).",
+          "Aumento significativo en la generación de prospectos (leads) calificados para la fuerza de ventas.",
+          "Canal de TikTok posicionado como referente educativo en prevención y seguros en Ecuador."
         ],
         links: [
-          { name: "Sitio Web Oficial", url: "https://www.hispanadeseguros.com/", icon: "fa-globe" },
-          { name: "Instagram", url: "https://www.instagram.com/hispanadesegurosec/", icon: "fa-instagram" },
-          { name: "TikTok", url: "https://www.tiktok.com/@hispanadesegurosec", icon: "fa-tiktok" },
-          { name: "LinkedIn Corporativo", url: "https://www.linkedin.com/company/hispana-de-seguros/", icon: "fa-linkedin" }
+          { text: "🌐 Portal Web Oficial", url: "https://www.hispanadeseguros.com/" },
+          { text: "📸 Instagram (@hispanadesegurosec)", url: "https://www.instagram.com/hispanadesegurosec/" },
+          { text: "🎵 TikTok (@hispanadesegurosec)", url: "https://www.tiktok.com/@hispanadesegurosec" },
+          { text: "💼 LinkedIn Corporativo", url: "https://www.linkedin.com/company/hispana-de-seguros/?originalSubdomain=ec" }
         ]
       },
       logos: {
+        category: "SECTOR EDUCATIVO",
         title: "Logos Academy",
-        category: "Marketing Educativo & Admisiones Escolares",
-        period: "Julio 2019 - Octubre 2022",
-        overview: "Gestión durante más de 3 años de la comunicación digital del colegio, asumiendo durante 8 meses la Jefatura Encargada del departamento de Marketing y Comunicación.",
+        date: "Julio 2019 – Octubre 2022",
+        role: "Gestión durante más de 3 años de la comunicación digital del colegio, asumiendo durante 8 meses la Jefatura Encargada del departamento de Marketing y Comunicación.",
         challenge: "Garantizar las metas de matrículas escolares durante ciclos anuales de admisiones y liderar la transición a entornos de comunicación híbridos.",
         tactics: [
           "Planificación digital (Digital Planner) orientada a periodos críticos de admisiones escolares en Guayaquil.",
@@ -989,226 +536,98 @@
           "Estructuración de procesos internos de marketing y diseño institucional."
         ],
         links: [
-          { name: "Sitio Web Oficial", url: "https://logosacademy.edu.ec/", icon: "fa-globe" },
-          { name: "Instagram Oficial", url: "https://www.instagram.com/logosacademy_edu/", icon: "fa-instagram" }
+          { text: "🌐 Web logosacademy.edu.ec", url: "https://logosacademy.edu.ec/" },
+          { text: "📸 Instagram (@logosacademy_edu)", url: "https://www.instagram.com/logosacademy_edu/" }
         ]
       },
-      as: {
+      as_soluciones: {
+        category: "B2B & CONSULTORÍA",
         title: "AS Soluciones",
-        category: "Servicios Corporativos B2B & Branding Digital",
-        period: "2026 - Actualidad",
-        overview: "Desarrollo de la identidad digital y estrategia de posicionamiento para una empresa de servicios operativos y soluciones empresariales.",
-        challenge: "Crear credibilidad corporativa desde cero en canales digitales para generar reuniones de prospección con gerencias y directores de operaciones.",
+        date: "2026 – Actualidad",
+        role: "Consultoría de marca y estrategia digital para empresa de servicios y soluciones empresariales técnicas.",
+        challenge: "Crear desde cero la identidad digital corporativa y generar credibilidad comercial para atraer tomadores de decisiones vía LinkedIn e Instagram.",
         tactics: [
-          "Definición de pilares de contenido: Casos de estudio, resolución técnica y credenciales de servicio.",
-          "Diseño de piezas visuales sobrias y elegantes acordes a la exigencia del mercado B2B.",
-          "Optimización de perfiles en LinkedIn e Instagram para captación activa."
+          "Definición de pilares temáticos enfocados en resolver problemas operativos de empresas clientes.",
+          "Diseño de piezas visuales y carruseles informativos con estándar corporativo limpio.",
+          "Optimización de perfiles en redes sociales con llamados a cotización de servicios."
         ],
         results: [
-          "Identidad de marca profesional y unificada.",
-          "Ecosistema listo para campañas B2B y prospección directa."
+          "Presencia digital coherente y validada comercialmente.",
+          "Generación de primeras consultas directas de empresas clientes en Guayaquil."
         ],
         links: [
-          { name: "Instagram", url: "https://www.instagram.com/assoluciones.ec/", icon: "fa-instagram" },
-          { name: "LinkedIn", url: "https://www.linkedin.com/company/as-soluciones-ec/", icon: "fa-linkedin" }
+          { text: "📸 Instagram (@assoluciones.ec)", url: "https://www.instagram.com/assoluciones.ec/" },
+          { text: "💼 LinkedIn Empresa", url: "https://www.linkedin.com/company/as-soluciones-ec/" }
         ]
       },
-      techweb: {
-        title: "Soluciones Web, 3D & Accesibilidad",
-        category: "Ingeniería en Comercio Electrónico & Web Dev",
-        period: "E-commerce Engineer",
-        overview: "Proyectos integrales de ingeniería web, tiendas virtuales, modelado tridimensional y desarrollo de interfaces con accesibilidad universal.",
-        challenge: "Construir aplicaciones y tiendas que integren estética, compatibilidad móvil, posicionamiento orgánico en Google y código funcional.",
+      tech: {
+        category: "INGENIERÍA & E-COMMERCE",
+        title: "Desarrollo Web, 3D & Proyectos Integrales",
+        date: "UCSG / DISTIMPART CIA. LTDA",
+        role: "Ingeniera en Comercio Electrónico y desarrolladora web en plataformas digitales y modelado tridimensional.",
+        challenge: "Diseñar plataformas web funcionales, modelar productos en 3D para tiendas interactivas y desarrollar tecnología accesible.",
         tactics: [
-          "Diseño y desarrollo de tienda virtual para DISTIMPART CIA. LTDA.",
-          "Reingeniería del sitio web para el Vicerrector Econ. Luis Fernando Hidalgo de la UCSG.",
-          "Modelado 3D en Blender para el proyecto de investigación 'VIRTUAL MARKET' de la UCSG.",
-          "Proyecto Integrador de grado: Análisis e implementación de prototipo de mensajería instantánea para personas con discapacidad visual."
+          "Diseño y elaboración de sitio y tienda virtual para DISTIMPART CIA. LTDA con modelado de piezas en Blender 3D.",
+          "Reingeniería del sitio web del Vicerrector Econ. Luis Fernando Hidalgo de la UCSG.",
+          "Proyecto Integrador de mensajería instantánea adaptado para personas con discapacidad visual.",
+          "Posicionamiento de negocios en Google Business y analítica web."
         ],
         results: [
-          "Reconocimiento de la Benemérita Sociedad Filantrópica del Guayas.",
-          "Premios a la Distinción Académica por parte de la UCSG.",
-          "Capacidad integral para liderar programadores, diseñadores y redactores."
+          "Premios por Distinción Académica UCSG (2016-2017 y 2017-2018).",
+          "Premios de la Benemérita Sociedad Filantrópica del Guayas (2016-2017 y 2017-2018).",
+          "Plataformas web desplegadas con código limpio (HTML5, JS, PHP, MySQL)."
         ],
         links: [
-          { name: "Perfil LinkedIn", url: "https://linkedin.com/in/maría-beatriz-valencia-robles-91985497", icon: "fa-linkedin" }
+          { text: "💼 Ver Perfil de LinkedIn", url: "https://linkedin.com/in/maría-beatriz-valencia-robles-91985497" }
         ]
       }
     };
 
-    function filterProjects(category) {
-      const cards = document.querySelectorAll('.project-card');
-      const buttons = document.querySelectorAll('.filter-btn');
-
-      buttons.forEach(btn => {
-        if (btn.getAttribute('data-filter') === category) {
-          btn.className = "filter-btn px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-gradient-to-r from-cyan-500 to-indigo-600 text-white transition-all";
-        } else {
-          btn.className = "filter-btn px-3.5 py-1.5 rounded-lg text-xs font-semibold text-neutral-300 hover:text-white transition-all";
-        }
-      });
-
-      cards.forEach(card => {
-        if (category === 'all' || card.getAttribute('data-category') === category) {
-          card.style.display = "block";
-        } else {
-          card.style.display = "none";
-        }
-      });
-    }
-
-    function openProjectModal(key) {
-      const data = projectsData[key];
+    function openModal(caseKey) {
+      const data = casesData[caseKey];
       if (!data) return;
 
-      const modal = document.getElementById('projectModal');
-      const content = document.getElementById('modalContent');
+      document.getElementById('modalCategory').innerText = data.category;
+      document.getElementById('modalTitle').innerText = data.title;
+      document.getElementById('modalDate').innerText = data.date;
+      document.getElementById('modalRole').innerText = data.role;
+      document.getElementById('modalChallenge').innerText = data.challenge;
 
-      const tacticsHtml = data.tactics.map(t => `
-        <li class="flex items-start gap-2.5 text-xs sm:text-sm text-neutral-300">
-          <i class="fa-solid fa-check text-cyan-400 mt-1 flex-shrink-0"></i>
-          <span>${t}</span>
-        </li>
-      `).join('');
+      const tacticsEl = document.getElementById('modalTactics');
+      tacticsEl.innerHTML = '';
+      data.tactics.forEach(t => {
+        tacticsEl.innerHTML += `<li class="flex items-start gap-2"><span class="text-neon-cyan font-bold">✓</span><span>${t}</span></li>`;
+      });
 
-      const resultsHtml = data.results.map(r => `
-        <li class="flex items-start gap-2.5 text-xs sm:text-sm text-cyan-300">
-          <i class="fa-solid fa-circle-check text-cyan-400 mt-1 flex-shrink-0"></i>
-          <span>${r}</span>
-        </li>
-      `).join('');
+      const resultsEl = document.getElementById('modalResults');
+      resultsEl.innerHTML = '';
+      data.results.forEach(r => {
+        resultsEl.innerHTML += `<li class="flex items-start gap-2"><span class="text-neon-violet font-bold">★</span><span>${r}</span></li>`;
+      });
 
-      const linksHtml = data.links.map(l => `
-        <a href="${l.url}" target="_blank" class="px-3.5 py-2 rounded-xl bg-neutral-900 border border-brand-border hover:border-cyan-400 text-white text-xs font-medium flex items-center gap-2 transition-all">
-          <i class="fa-brands ${l.icon} text-cyan-400"></i>
-          <span>${l.name}</span>
-          <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-neutral-500"></i>
-        </a>
-      `).join('');
+      const linksEl = document.getElementById('modalLinks');
+      linksEl.innerHTML = '';
+      data.links.forEach(l => {
+        linksEl.innerHTML += `<a href="${l.url}" target="_blank" class="px-3 py-1.5 rounded-lg bg-dark-surface hover:bg-neon-cyan hover:text-black border border-dark-border text-neon-cyan hover:border-transparent text-xs font-mono font-medium transition-all">${l.text}</a>`;
+      });
 
-      content.innerHTML = `
-        <div class="flex items-start justify-between border-b border-brand-border pb-4 pr-10">
-          <div>
-            <span class="text-xs font-bold text-cyan-400 font-mono uppercase tracking-wider block mb-1">${data.category}</span>
-            <h2 class="text-2xl sm:text-3xl font-extrabold font-display text-white">${data.title}</h2>
-            <span class="text-xs text-neutral-400 font-mono mt-1 block"><i class="fa-regular fa-calendar-days mr-1.5 text-cyan-400"></i>${data.period}</span>
-          </div>
-        </div>
-
-        <div class="space-y-2">
-          <h4 class="text-xs font-bold uppercase tracking-wider text-neutral-400">Contexto & Rol</h4>
-          <p class="text-sm text-neutral-300 leading-relaxed">${data.overview}</p>
-        </div>
-
-        <div class="p-4 rounded-xl bg-neutral-950 border border-brand-border space-y-2">
-          <h4 class="text-xs font-bold uppercase tracking-wider text-cyan-400">El Desafío de Crecimiento</h4>
-          <p class="text-xs sm:text-sm text-neutral-300">${data.challenge}</p>
-        </div>
-
-        <div class="space-y-3">
-          <h4 class="text-xs font-bold uppercase tracking-wider text-neutral-400">Tácticas & Estrategia Ejecutada</h4>
-          <ul class="space-y-2">
-            ${tacticsHtml}
-          </ul>
-        </div>
-
-        <div class="p-4 rounded-xl bg-neutral-950/80 border border-cyan-500/30 space-y-2">
-          <h4 class="text-xs font-bold uppercase tracking-wider text-cyan-400">Resultados & Valor Aportado</h4>
-          <ul class="space-y-1.5">
-            ${resultsHtml}
-          </ul>
-        </div>
-
-        <div class="pt-2 border-t border-brand-border">
-          <h4 class="text-xs font-bold uppercase tracking-wider text-neutral-400 mb-3">Canales Verificados & Enlaces Directos</h4>
-          <div class="flex flex-wrap gap-2.5">
-            ${linksHtml}
-          </div>
-        </div>
-      `;
-
+      const modal = document.getElementById('modalContainer');
       modal.classList.remove('hidden');
       document.body.style.overflow = 'hidden';
     }
 
-    function closeProjectModal() {
-      const modal = document.getElementById('projectModal');
+    function closeModal() {
+      const modal = document.getElementById('modalContainer');
       modal.classList.add('hidden');
-      document.body.style.overflow = 'auto';
+      document.body.style.overflow = '';
     }
 
-    window.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') closeProjectModal();
-    });
-
-    document.getElementById('projectModal').addEventListener('click', (e) => {
-      if (e.target.id === 'projectModal') closeProjectModal();
-    });
-
-    // ================= PITCH DECK LOGIC =================
-    let currentSlide = 0;
-    const totalSlides = 5;
-
-    function togglePitchDeck() {
-      const deckView = document.getElementById('pitchDeckView');
-      const isHidden = deckView.classList.contains('hidden');
-
-      if (isHidden) {
-        deckView.classList.remove('hidden');
-        document.body.style.overflow = 'hidden';
-        currentSlide = 0;
-        showSlide(currentSlide);
-      } else {
-        deckView.classList.add('hidden');
-        document.body.style.overflow = 'auto';
-      }
-    }
-
-    function showSlide(index) {
-      for (let i = 0; i < totalSlides; i++) {
-        const slide = document.getElementById(`slide-${i}`);
-        if (slide) slide.classList.add('hidden');
-      }
-      const activeSlide = document.getElementById(`slide-${index}`);
-      if (activeSlide) activeSlide.classList.remove('hidden');
-
-      document.getElementById('deckSlideCounter').innerText = `Slide ${index + 1} de ${totalSlides}`;
-
-      const dotsContainer = document.getElementById('deckDots');
-      dotsContainer.innerHTML = '';
-      for (let i = 0; i < totalSlides; i++) {
-        const dot = document.createElement('span');
-        dot.className = i === index 
-          ? "w-2.5 h-2.5 rounded-full bg-cyan-400 transition-all" 
-          : "w-2.5 h-2.5 rounded-full bg-neutral-700 transition-all";
-        dotsContainer.appendChild(dot);
-      }
-    }
-
-    function nextSlide() {
-      if (currentSlide < totalSlides - 1) {
-        currentSlide++;
-        showSlide(currentSlide);
-      } else {
-        currentSlide = 0;
-        showSlide(currentSlide);
-      }
-    }
-
-    function prevSlide() {
-      if (currentSlide > 0) {
-        currentSlide--;
-        showSlide(currentSlide);
-      }
-    }
-
-    window.addEventListener('keydown', (e) => {
-      const deckView = document.getElementById('pitchDeckView');
-      if (!deckView.classList.contains('hidden')) {
-        if (e.key === 'ArrowRight' || e.key === 'Space') nextSlide();
-        if (e.key === 'ArrowLeft') prevSlide();
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        closeModal();
       }
     });
   </script>
+
 </body>
 </html>
